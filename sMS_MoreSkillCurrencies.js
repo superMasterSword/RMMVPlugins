@@ -1371,7 +1371,7 @@ if (Imported.YEP_ExtraParamFormula) {
 	$.MSC.GameBattlerBase_xparam = Game_BattlerBase.prototype.xparam;
 	Game_BattlerBase.prototype.xparam = function(xparamId) {
 		var finalID = $.MSC.extraStartID + $.MSC.numStats;
-		if (xparamId >= $.MSC.extraStartID && xparamId < $.MSC.finalID) {
+		if (xparamId >= $.MSC.extraStartID && xparamId < finalID) {
 			return Yanfly.XParam.Game_BattlerBase_xparam.call(this, xparamId);
 		} else {
 			return $.MSC.GameBattlerBase_xparam.call(this, xparamId);
